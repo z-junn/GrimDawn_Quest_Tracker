@@ -1,22 +1,35 @@
 # 黎明助手 / Grim Dawn Assistant
 
-GDA 整合《Grim Dawn》的任務追蹤、掉落篩選與地圖 Overlay，提供中文／英文介面。
+Grim Dawn 的任務追蹤、地圖 Overlay 與自訂掉落篩選工具。
 
-## v0.4.1
+目前版本：**v0.4.10**
 
-- 版本、語言及顯示大小收進可展開／收起的「一般設定」。
-- Overlay 快捷鍵設定移至最上方，新安裝先設定快捷鍵才能啟用。
-- 數字鍵盤顯示 Num 1、Num +、Num Enter，與主鍵盤數字分開。
-- 常駐提醒：選擇 M 會取代遊戲原本以 M 開啟大地圖的功能。
-- 快捷鍵與啟用／關閉選擇跨重開及更新保留；啟用後保持待命，進入遊戲按快捷鍵才顯示地圖。
-- 重設地圖外觀保留快捷鍵與啟用選擇，更新替換支援短暫檔案鎖定重試。
+[下載最新版本](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/latest) · [v0.4.10 更新內容與檔案](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/tag/v0.4.10)
 
-[最新正式版本與所有下載](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/latest)
+建議下載 Win64.zip，解壓縮後啟動 GrimDawnAssistant.exe。原始碼與「程式＋原始碼」完整包亦在 Release 提供。SHA256SUMS.txt 可核對下載內容。
 
-[下載完整包（程式＋完整原始碼）](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/download/v0.4.1/GrimDawn_Assistant_v0.4.1_Complete_With_Source.zip)
+## 功能
 
-只需程式可下載 **GrimDawn_Assistant_v0.4.1_Win64.zip**，完整解壓後執行 **GrimDawnAssistant.exe**。升級前關閉 GDA，保留原本 **Data** 與 **Backups**；既有快捷鍵與啟用選擇會保留，新安裝不預設快捷鍵或啟用 Overlay。
+- 任務依章節及主線／支線分組，可獨立收合；依存檔階段顯示目標、NPC 與任務位置。同一目標的隨機地點可合併在同一張地圖。
+- 地圖 Overlay、可自訂快捷鍵、方向線與 GPS 導航；保留迷霧探索引導與跨區路線功能。
+- 掉落篩選整合詞條與前後綴，支援單手／雙手武器、護甲、飾品的適用性選擇、效果說明、職業分組、AND／OR、Undo 與具名存檔。
+- 搜尋接受簡體中文、繁體中文與英文。繁體為搜尋別名；顯示名稱以官方中英文 tag 核查。
+- 數值條件接受單一 >、< 或 = 與 0～99999 整數，留空不限數值。傷害區間以上限比較，例如 80–120 符合 >100。
 
-程式內更新相容資產 **GrimDawnQuestTracker.exe** 與新名稱 EXE 內容完全相同。完整來源亦可單獨下載 **GrimDawn_Assistant_v0.4.1_Source.zip**。此儲存庫主要提供版本下載；GitHub 自動產生的 Source code ZIP 不代表完整程式來源。
+## 更新與設定
 
-GDA provides quest tracking, loot filtering and an in-game map overlay in Chinese and English. General settings now collapse in the sidebar. Set an Overlay shortcut before enabling it; Num keypad bindings remain distinct. The shortcut and enabled preference survive restarts and updates, while the map stays hidden until you press the shortcut in the game. Keep Data and Backups when upgrading. Download the explicit Source ZIP or complete bundle for the full project.
+更新後請**退出並重開 Grim Dawn，再啟動 GDA**，讓新版篩選 DLL 載入。保留原 Data 資料夾；更新不應清空玩家 filter 存檔或 Overlay 設定。
+
+舊規則不會在開啟新版時被自動改寫。具名 filter 存檔與數值條件、Overlay 啟用／停用狀態和快捷鍵均保留。格式變更前備份，錯誤或失敗不會清空原始檔案。新編輯器草稿／具名存檔位於 Data/loot-editor.json，已套用規則位於 Data/loot-applied.json。
+
+## 核查範圍與限制
+
+全部 6191 筆前後綴定義已對照官方中英文 tag；189 個篩選項目使用衍生標籤，沒有冒充遊戲內獨立原句。13 個來源型複合效果僅判斷有無；103 個詞綴候選版本的正常生成路徑仍待確認。包含定義不代表保證掉落。
+
+測試包含單元／原生 fixture、隔離介面與更新交接；未連接玩家遊戲或宣稱逐件實測掉落。版本指紋或資料讀取不符時保留原遊戲篩選。詳細核查報告與限制隨封包 docs/ 及 VERIFICATION.json 提供。
+
+## English
+
+Grim Dawn Assistant provides quest-stage maps, a map overlay and a custom loot filter. Version 0.4.10 unifies properties and affixes, adds named presets and integer thresholds, and supports simplified/traditional Chinese plus English search. Existing saved filters and Overlay preferences are preserved across updates.
+
+Download the Win64 package from Releases. Restart Grim Dawn after updating to load the new filter bridge, and retain your existing Data folder. Source and complete packages are available with SHA256 checksums. Official game assets and names belong to Crate Entertainment; GrimTools map sources are credited in the application. See bundled licenses and verification reports.
