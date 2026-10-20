@@ -2,11 +2,19 @@
 
 Grim Dawn 的任務追蹤、地圖 Overlay 與自訂掉落篩選工具。
 
-目前版本：**v0.4.10**
+目前版本：**v0.4.11**
 
-[下載最新版本](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/latest) · [v0.4.10 更新內容與檔案](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/tag/v0.4.10)
+[下載最新版本](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/latest) · [v0.4.11 更新內容與檔案](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/tag/v0.4.11)
 
 建議下載 Win64.zip，解壓縮後啟動 GrimDawnAssistant.exe。原始碼與「程式＋原始碼」完整包亦在 Release 提供。SHA256SUMS.txt 可核對下載內容。
+
+## v0.4.11 更新
+
+- 修正稀有度顏色，調細篩選標題。
+- 武器／裝備與前後綴預設不勾選；既有組合會還原已加入的選擇。
+- 所有分類與搜尋結果的細項可展開／收起，預設收起。
+- 套用區塊固定於可視範圍底部，長清單捲動時仍可操作。
+- 已驗證 v0.4.10 → v0.4.11 更新保留 filter 存檔與 Overlay 設定。
 
 ## 功能
 
@@ -18,7 +26,7 @@ Grim Dawn 的任務追蹤、地圖 Overlay 與自訂掉落篩選工具。
 
 ## 更新與設定
 
-更新後請**退出並重開 Grim Dawn，再啟動 GDA**，讓新版篩選 DLL 載入。保留原 Data 資料夾；更新不應清空玩家 filter 存檔或 Overlay 設定。
+保留原 Data 與 Backups 資料夾；更新保留玩家 filter 存檔與 Overlay 設定。本版原生篩選 DLL、Overlay 引擎及 GPS 資料與 v0.4.10 相同；從更早版本升級而需載入新 DLL 時，請退出並重開 Grim Dawn。
 
 舊規則不會在開啟新版時被自動改寫。具名 filter 存檔與數值條件、Overlay 啟用／停用狀態和快捷鍵均保留。格式變更前備份，錯誤或失敗不會清空原始檔案。新編輯器草稿／具名存檔位於 Data/loot-editor.json，已套用規則位於 Data/loot-applied.json。
 
@@ -30,6 +38,6 @@ Grim Dawn 的任務追蹤、地圖 Overlay 與自訂掉落篩選工具。
 
 ## English
 
-Grim Dawn Assistant provides quest-stage maps, a map overlay and a custom loot filter. Version 0.4.10 unifies properties and affixes, adds named presets and integer thresholds, and supports simplified/traditional Chinese plus English search. Existing saved filters and Overlay preferences are preserved across updates.
+Grim Dawn Assistant provides quest-stage maps, a map overlay and a custom loot filter. Version 0.4.11 fixes rarity colors, uses lighter headings, collapses all detail sections by default and keeps Apply visible while scrolling. It includes unified property/affix filters, named presets, integer thresholds and simplified/traditional Chinese plus English search. Existing saved filters and Overlay preferences are preserved across updates.
 
 Download the Win64 package from Releases. Restart Grim Dawn after updating to load the new filter bridge, and retain your existing Data folder. Source and complete packages are available with SHA256 checksums. Official game assets and names belong to Crate Entertainment; GrimTools map sources are credited in the application. See bundled licenses and verification reports.
