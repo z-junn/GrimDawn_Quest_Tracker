@@ -2,19 +2,18 @@
 
 Grim Dawn 的任務追蹤、地圖 Overlay 與自訂掉落篩選工具。
 
-目前版本：**v0.4.12**
+目前版本：**v0.4.13**
 
-[下載最新版本](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/latest) · [v0.4.12 更新內容與檔案](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/tag/v0.4.12)
+[下載最新版本](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/latest) · [v0.4.13 更新內容與檔案](https://github.com/z-junn/GrimDawn_Quest_Tracker/releases/tag/v0.4.13)
 
-建議下載 Win64.zip，解壓縮後啟動 GrimDawnAssistant.exe。原始碼與「程式＋原始碼」完整包亦在 Release 提供。SHA256SUMS.txt 可核對下載內容。
+建議下載 Win64.zip，解壓縮後啟動 GrimDawnAssistant.exe。SHA256SUMS.txt 可核對下載內容。
 
-## v0.4.12 更新
+## v0.4.13 更新
 
-- 前後綴新增盾牌與副手法器，分類整理為「飾品&副手」。
-- 對應詞綴的等級效果、職業分組與中英文搜尋一併加入。
-- 遊戲端同步補上盾牌與副手法器辨識；更新後請重開 Grim Dawn。
-- Filter 跟隨介面大小與文字大小設定。
-- 已驗證 v0.4.11 → v0.4.12 保留已套用 Filter、具名存檔與 Overlay 設定。
+- 修復重新啟動程式後更新提醒被舊狀態抑制的情況。
+- 已下載的更新也會顯示可安裝狀態，檢查失敗後會自動重試。
+- 調整內嵌資源封裝，保留舊版單檔更新相容性。
+- 已驗證 v0.4.12 → v0.4.13 保留已套用 Filter、具名存檔與 Overlay 設定。
 
 ## 功能
 
@@ -26,7 +25,7 @@ Grim Dawn 的任務追蹤、地圖 Overlay 與自訂掉落篩選工具。
 
 ## 更新與設定
 
-保留原 Data 與 Backups 資料夾；更新保留玩家 filter 存檔與 Overlay 設定。本版更新原生篩選 DLL，請退出並重開 Grim Dawn，再啟動 GDA。Overlay 引擎及 GPS 資料保持不變。
+保留原 Data 與 Backups 資料夾；更新保留玩家 filter 存檔與 Overlay 設定。關閉舊版後執行新版；更新確認視窗會顯示目前版本與可更新版本。若沒有自動提醒，可在一般設定中手動檢查更新。
 
 舊規則不會在開啟新版時被自動改寫。具名 filter 存檔與數值條件、Overlay 啟用／停用狀態和快捷鍵均保留。格式變更前備份，錯誤或失敗不會清空原始檔案。新編輯器草稿／具名存檔位於 Data/loot-editor.json，已套用規則位於 Data/loot-applied.json。
 
@@ -34,10 +33,10 @@ Grim Dawn 的任務追蹤、地圖 Overlay 與自訂掉落篩選工具。
 
 全部 6191 筆前後綴定義已對照官方中英文 tag；189 個篩選項目使用衍生標籤，沒有冒充遊戲內獨立原句。13 個來源型複合效果僅判斷有無；103 個詞綴候選版本的正常生成路徑仍待確認。包含定義不代表保證掉落。
 
-測試包含單元／原生 fixture、隔離介面與更新交接；未連接玩家遊戲或宣稱逐件實測掉落。版本指紋或資料讀取不符時保留原遊戲篩選。詳細核查報告與限制隨封包 docs/ 及 VERIFICATION.json 提供。
+測試包含單元／原生 fixture、隔離介面與更新交接；未連接玩家遊戲或宣稱逐件實測掉落。版本指紋或資料讀取不符時保留原遊戲篩選。
 
 ## English
 
-Grim Dawn Assistant provides quest-stage maps, a map overlay and a custom loot filter. Version 0.4.12 adds shield/caster off-hand affixes under Accessories & Off-hands and fixes filter UI/text scaling. It includes unified property/affix filters, named presets, integer thresholds and simplified/traditional Chinese plus English search. Existing saved filters and Overlay preferences are preserved across updates.
+Grim Dawn Assistant provides quest-stage maps, a map overlay and a custom loot filter. Version 0.4.13 improves update notifications, retries failed checks and preserves compatibility with the single-file updater. Existing saved filters and Overlay preferences are preserved across updates.
 
-Download the Win64 package from Releases. Restart Grim Dawn after updating to load the new filter bridge, and retain your existing Data folder. Source and complete packages are available with SHA256 checksums. Official game assets and names belong to Crate Entertainment; GrimTools map sources are credited in the application. See bundled licenses and verification reports.
+Download the Win64 package from Releases and retain your existing Data and Backups folders. SHA256SUMS.txt provides download checksums. Official game assets and names belong to Crate Entertainment; third-party notices are included with the download.
